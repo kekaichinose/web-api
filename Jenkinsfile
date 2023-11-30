@@ -18,6 +18,10 @@ pipeline {
         validationResultsPath = ""
     }
     agent any
+    options {
+        // This is required if you want to clean before build
+        skipDefaultCheckout(true)
+    }
     /**
     * Jenkins pipline related variables
     */
@@ -104,14 +108,15 @@ pipeline {
                 configFile: ${configFilePath}
                 dataFormat: ${configFileFormat}
                 """
-                // pre-build cleanup
-                sh "rm ${validationResultsPath}"
             }
         }
             
         // Build and publish application image
         stage('Build') {      
             steps {
+                // Clean before build
+                cleanWs()
+                
                 checkout scm    
                 echo "scm checkout successful"
                 
