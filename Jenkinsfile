@@ -8,7 +8,7 @@
 * collectionName="release-1.0"
 * exportFormat ='yaml'
 * configFilePath = "k8s/helm/values.yml"
-* exporterName ='returnAllData-nowPreview' 
+* exporterName ='returnAllData-now' 
 * exporterArgs = ''
 */
 
@@ -43,7 +43,7 @@ pipeline {
                     /**
                     * Devops Config exporter related information
                     */
-                    exporterName = 'returnAllData-nowPreview' 
+                    exporterName = 'returnAllData-now' 
                     exporterArgs = ''
                     exportFormat = 'yaml'
                     /**
