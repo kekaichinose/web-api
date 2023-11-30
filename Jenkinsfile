@@ -104,6 +104,8 @@ pipeline {
                 configFile: ${configFilePath}
                 dataFormat: ${configFileFormat}
                 """
+                // pre-build cleanup
+                sh "rm ${validationResultsPath}"
             }
         }
             
