@@ -155,6 +155,13 @@ pipeline {
 
                                     echo "Snapshots generated, validated, and published: ${changeSetResults}"
 
+                                    def changeSetResultsObject = readJSON text: changeSetResults
+
+                                    changeSetResultsObject.each {
+                                        snapshotName = it.name
+                                        snapshotObject = it
+                                    }
+
                                     validationResultsPath = "${snapshotName}_${currentBuild.projectName}_${currentBuild.number}.xml"
                                 }
                             }
