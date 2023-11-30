@@ -148,6 +148,8 @@ pipeline {
                                         autoCommit: 'true',
                                         autoValidate: 'true',
                                         autoPublish: 'true',
+                                        isValidated: 'true',
+                                        continueWithLatest: 'true',
                                         markFailed: 'true'
                                     )
 
