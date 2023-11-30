@@ -162,7 +162,7 @@ pipeline {
                                         snapshotObject = it
                                     }
 
-                                    validationResultsPath = "${snapshotName}_${currentBuild.projectName}_${currentBuild.number}.xml"
+                                    validationResultsPath = "${snapshotName}_${currentBuild.projectName}_${currentBuild.number}*.xml"
                                 }
                             }
                         }
