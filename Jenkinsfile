@@ -57,7 +57,7 @@ pipeline {
                     isSnapshotCreated = false
                     isSnapshotValidateionRequired = false
                     isSnapshotPublisingRequired = false
-                    skipChange = false
+                    skipChange = true
                     
                     buildNumberArtifact = "grefId123"
 
